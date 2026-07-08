@@ -32,17 +32,17 @@ export default function Hero() {
           </Reveal>
 
           <Reveal delay={80}>
-            <h1 className="font-display text-4xl font-extrabold uppercase leading-[1.05] tracking-tight text-paper sm:text-6xl lg:text-7xl">
+            <h1 className="text-shadow-hero text-stroke-hero font-display text-4xl font-extrabold uppercase leading-[1.05] tracking-tight text-paper sm:text-6xl lg:text-7xl">
               Conectando
               <br />
               la producción minera
               <br />
-              con los <span className="text-copper">mercados globales</span>
+              con los <span className="text-[#B85A2E]">mercados globales</span>
             </h1>
           </Reveal>
 
           <Reveal delay={160}>
-            <p className="mt-6 max-w-xl text-base text-muted sm:text-lg">
+            <p className="hero-glass mt-6 inline-block max-w-xl text-base text-gray-100 sm:text-lg">
               Soluciones para la industria minera con compromiso, transparencia y eficiencia.
             </p>
           </Reveal>
@@ -50,7 +50,7 @@ export default function Hero() {
           <Reveal delay={240}>
             <div className="mt-8 h-1 w-16 bg-copper" />
 
-            <p className="eyebrow mt-6 text-muted">
+            <p className="hero-glass eyebrow mt-6 inline-block text-gray-100">
               Desarrollo Minero <span className="mx-2 text-copper">|</span> Procesamiento{" "}
               <span className="mx-2 text-copper">|</span> Comercialización
             </p>

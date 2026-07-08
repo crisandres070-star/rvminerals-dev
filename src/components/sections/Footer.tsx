@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import Logo from "@/components/ui/Logo";
 import SouthAmericaMap from "@/components/ui/SouthAmericaMap";
 import ContactForm from "@/components/sections/ContactForm";
@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer id="contacto" className="grain-overlay border-t border-white/5 bg-ink-900">
       <div className="relative z-10 mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 items-start gap-12 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <Logo />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">
@@ -58,6 +58,14 @@ export default function Footer() {
               <li className="flex items-center gap-3">
                 <MapPin className="h-4 w-4 shrink-0 text-copper" strokeWidth={1.5} aria-hidden="true" />
                 <span>Antofagasta, Chile</span>
+              </li>
+            </ul>
+
+            <h3 className="eyebrow mt-8 text-copper">Horario de Atención</h3>
+            <ul className="mt-5 space-y-4 text-sm text-muted">
+              <li className="flex items-center gap-3">
+                <Clock className="h-4 w-4 shrink-0 text-copper" strokeWidth={1.5} aria-hidden="true" />
+                <span>Lunes a viernes: 9:00 - 18:00</span>
               </li>
             </ul>
           </div>
