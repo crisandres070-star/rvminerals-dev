@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer id="contacto" className="grain-overlay border-t border-white/5 bg-ink-900">
       <div className="relative z-10 mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 items-start gap-12 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 items-start gap-12 sm:grid-cols-2 sm:items-center lg:grid-cols-4">
           <div>
             <Logo />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">

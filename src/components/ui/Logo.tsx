@@ -1,17 +1,22 @@
-import { Mountain } from "lucide-react";
+import Image from "next/image";
+import logoHybrid from "../../../public/images/logo/rv-logo-hybrid.png";
+import logoNavy from "../../../public/images/logo/rv-logo-navy.png";
 
-export default function Logo() {
+type LogoProps = {
+  className?: string;
+  /**
+   * "dark" (default): copper icon + white wordmark, for dark backgrounds (navbar, footer).
+   * "navy": original navy lockup, for light backgrounds if ever needed.
+   */
+  variant?: "dark" | "navy";
+};
+
+export default function Logo({ className = "h-10", variant = "dark" }: LogoProps) {
+  const src = variant === "navy" ? logoNavy : logoHybrid;
+
   return (
-    <a href="#inicio" className="flex items-center gap-3" aria-label="R & V Minerals SpA, ir a inicio">
-      <Mountain className="h-8 w-8 shrink-0 text-copper" strokeWidth={1.5} aria-hidden="true" />
-      <span className="flex flex-col leading-none">
-        <span className="font-display text-xl font-extrabold tracking-tight text-paper">
-          R&amp;V
-        </span>
-        <span className="text-[10px] font-medium uppercase tracking-[0.25em] text-muted">
-          Minerals SpA
-        </span>
-      </span>
+    <a href="#inicio" className="flex items-center" aria-label="R & V Minerals SpA, ir a inicio">
+      <Image src={src} alt="R & V Minerals SpA" className={`w-auto ${className}`} priority />
     </a>
   );
 }

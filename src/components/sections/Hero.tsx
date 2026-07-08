@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowRight, Mail, Phone } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import heroImage from "../../../public/images/mining/imagen-principal.png";
 import Reveal from "@/components/ui/Reveal";
 
@@ -42,7 +42,7 @@ export default function Hero() {
           </Reveal>
 
           <Reveal delay={160}>
-            <p className="hero-glass mt-6 inline-block max-w-xl text-base text-gray-100 sm:text-lg">
+            <p className="text-shadow-hero mt-6 max-w-xl text-base text-gray-100 sm:text-lg">
               Soluciones para la industria minera con compromiso, transparencia y eficiencia.
             </p>
           </Reveal>
@@ -50,7 +50,7 @@ export default function Hero() {
           <Reveal delay={240}>
             <div className="mt-8 h-1 w-16 bg-copper" />
 
-            <p className="hero-glass eyebrow mt-6 inline-block text-gray-100">
+            <p className="eyebrow text-shadow-hero mt-6 text-gray-100">
               Desarrollo Minero <span className="mx-2 text-copper">|</span> Procesamiento{" "}
               <span className="mx-2 text-copper">|</span> Comercialización
             </p>
@@ -64,27 +64,6 @@ export default function Hero() {
             </a>
           </Reveal>
         </div>
-      </div>
-
-      <div className="absolute bottom-6 right-4 z-10 rounded-lg border border-white/10 bg-ink-900/70 p-5 backdrop-blur-sm sm:bottom-10 sm:right-8 sm:p-6">
-        <ul className="space-y-3 text-sm text-paper">
-          <li className="flex items-center gap-3">
-            <span className="flex h-8 w-8 items-center justify-center rounded-full border border-copper/50 text-copper">
-              <Phone className="h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
-            </span>
-            <a href="tel:+56989126993" className="hover:text-copper">
-              +56 9 8912 6993
-            </a>
-          </li>
-          <li className="flex items-center gap-3">
-            <span className="flex h-8 w-8 items-center justify-center rounded-full border border-copper/50 text-copper">
-              <Mail className="h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
-            </span>
-            <a href="mailto:administración@rvminerals.com" className="hover:text-copper">
-              administración@rvminerals.com
-            </a>
-          </li>
-        </ul>
       </div>
     </section>
   );
