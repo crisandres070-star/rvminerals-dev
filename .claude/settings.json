@@ -97,7 +97,15 @@
       "Bash(netstat -ano)",
       "Bash(taskkill //PID 21576 //F)",
       "Bash(git status *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(curl -s http://localhost:3000)",
+      "Bash(curl -s http://localhost:3001)",
+      "Bash(taskkill //PID 15708 //F)",
+      "Bash(mkdir -p /c/Users/crisa/AppData/Local/Temp/claude/c--Users-crisa-proyectos-rv-minerals/86abd527-7aa6-4d18-897f-2f378ea309e8/scratchpad/audit-375)",
+      "Bash(node /c/Users/crisa/AppData/Local/Temp/claude/c--Users-crisa-proyectos-rv-minerals/86abd527-7aa6-4d18-897f-2f378ea309e8/scratchpad/pwtmp/audit-shot.mjs http://localhost:3001 375 /c/Users/crisa/AppData/Local/Temp/claude/c--Users-crisa-proyectos-rv-minerals/86abd527-7aa6-4d18-897f-2f378ea309e8/scratchpad/audit-375)",
+      "Bash(node /c/Users/crisa/AppData/Local/Temp/claude/c--Users-crisa-proyectos-rv-minerals/86abd527-7aa6-4d18-897f-2f378ea309e8/scratchpad/pwtmp/touch-target.mjs)",
+      "Bash(taskkill //PID 15776 //F)"
     ]
   }
 }

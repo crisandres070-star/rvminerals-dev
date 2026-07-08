@@ -53,6 +53,14 @@ export default function CadenaDeValor() {
                   delay={index * 80}
                   className="relative flex gap-4 lg:flex-col lg:gap-0"
                 >
+                  {index < etapas.length - 1 && (
+                    <span
+                      aria-hidden="true"
+                      className="absolute left-6 top-12 z-0 border-l-2 border-dashed border-copper/30 lg:hidden"
+                      style={{ bottom: "-2.5rem" }}
+                    />
+                  )}
+
                   <div className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-copper bg-ink-900 text-copper">
                     <Icon className="h-5 w-5" strokeWidth={1.5} aria-hidden="true" />
                   </div>

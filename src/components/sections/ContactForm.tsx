@@ -26,7 +26,7 @@ export default function ContactForm() {
           name="nombre"
           type="text"
           required
-          className="w-full rounded border border-white/15 bg-ink-700 px-3 py-2.5 text-sm text-paper placeholder:text-muted/60 focus:border-copper"
+          className="w-full min-h-11 rounded border border-white/15 bg-ink-700 px-3 py-2.5 text-sm text-paper placeholder:text-muted/60 focus:border-copper"
           placeholder="Tu nombre"
         />
       </div>
@@ -40,7 +40,7 @@ export default function ContactForm() {
           name="correo"
           type="email"
           required
-          className="w-full rounded border border-white/15 bg-ink-700 px-3 py-2.5 text-sm text-paper placeholder:text-muted/60 focus:border-copper"
+          className="w-full min-h-11 rounded border border-white/15 bg-ink-700 px-3 py-2.5 text-sm text-paper placeholder:text-muted/60 focus:border-copper"
           placeholder="tucorreo@ejemplo.com"
         />
       </div>
@@ -54,7 +54,7 @@ export default function ContactForm() {
           name="asunto"
           type="text"
           required
-          className="w-full rounded border border-white/15 bg-ink-700 px-3 py-2.5 text-sm text-paper placeholder:text-muted/60 focus:border-copper"
+          className="w-full min-h-11 rounded border border-white/15 bg-ink-700 px-3 py-2.5 text-sm text-paper placeholder:text-muted/60 focus:border-copper"
           placeholder="Asunto de tu mensaje"
         />
       </div>
