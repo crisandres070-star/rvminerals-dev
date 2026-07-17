@@ -18,12 +18,12 @@ export default function Navbar() {
           <Logo />
         </div>
 
-        <ul className="hidden items-center gap-4 xl:flex 2xl:gap-6">
+        <ul className="hidden items-center gap-3 xl:flex 2xl:gap-5">
           {navLinks.map((link) => (
             <li key={link.href} className="shrink-0">
               <a
                 href={link.href}
-                className={`whitespace-nowrap text-[11px] font-semibold uppercase tracking-wide transition-colors ${
+                className={`whitespace-nowrap text-sm font-semibold uppercase tracking-wide transition-colors ${
                   link.href === "#inicio"
                     ? "border-b-2 border-copper pb-1 text-paper"
                     : "text-muted hover:text-paper"

@@ -50,10 +50,17 @@ export default function Hero() {
           <Reveal delay={240}>
             <div className="mt-8 h-1 w-16 bg-copper" />
 
-            <p className="eyebrow text-shadow-hero mt-6 text-gray-100">
-              Desarrollo Minero <span className="mx-2 text-copper">|</span> Procesamiento{" "}
-              <span className="mx-2 text-copper">|</span> Comercialización
-            </p>
+            <div className="text-shadow-hero eyebrow mt-6 flex flex-col items-start gap-3 text-gray-100 sm:flex-row sm:items-center sm:gap-0">
+              <span className="inline-block border-b-2 border-copper/70 pb-1.5 sm:border-0 sm:pb-0">
+                Desarrollo Minero
+              </span>
+              <span className="hidden text-copper sm:mx-2 sm:inline">|</span>
+              <span className="inline-block border-b-2 border-copper/70 pb-1.5 sm:border-0 sm:pb-0">
+                Procesamiento
+              </span>
+              <span className="hidden text-copper sm:mx-2 sm:inline">|</span>
+              <span>Comercialización</span>
+            </div>
 
             <a
               href="#quienes-somos"
