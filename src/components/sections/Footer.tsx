@@ -1,4 +1,5 @@
-import { Clock, Mail, MapPin, Phone } from "lucide-react";
+import Link from "next/link";
+import { Mail, MapPin, Phone } from "lucide-react";
 import Logo from "@/components/ui/Logo";
 import SouthAmericaMap from "@/components/ui/SouthAmericaMap";
 import ContactForm from "@/components/sections/ContactForm";
@@ -60,14 +61,6 @@ export default function Footer() {
                 <span>Antofagasta, Chile</span>
               </li>
             </ul>
-
-            <h3 className="eyebrow mt-8 text-copper">Horario de Atención</h3>
-            <ul className="mt-5 space-y-4 text-sm text-muted">
-              <li className="flex items-center gap-3">
-                <Clock className="h-4 w-4 shrink-0 text-copper" strokeWidth={1.5} aria-hidden="true" />
-                <span>Lunes a viernes: 9:00 - 18:00</span>
-              </li>
-            </ul>
           </div>
 
           <div className="hidden items-center justify-center lg:flex">
@@ -85,12 +78,12 @@ export default function Footer() {
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/5 pt-8 text-xs text-muted sm:flex-row">
           <p>© 2026 R &amp; V Minerals SpA. Todos los derechos reservados.</p>
           <div className="flex items-center gap-6">
-            <a href="#" className="hover:text-paper">
+            <Link href="/politica-de-privacidad" className="hover:text-paper">
               Política de Privacidad
-            </a>
-            <a href="#" className="hover:text-paper">
+            </Link>
+            <Link href="/terminos-y-condiciones" className="hover:text-paper">
               Términos y Condiciones
-            </a>
+            </Link>
           </div>
         </div>
       </div>

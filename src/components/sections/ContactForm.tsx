@@ -1,19 +1,45 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Loader2 } from "lucide-react";
 
-type Status = "idle" | "success";
+type Status = "idle" | "loading" | "success" | "error";
 
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
 
-  // TODO: conectar a Resend o EmailJS para el envío real del formulario.
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setStatus("success");
-    event.currentTarget.reset();
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    const payload = {
+      nombre: formData.get("nombre"),
+      correo: formData.get("correo"),
+      asunto: formData.get("asunto"),
+      mensaje: formData.get("mensaje"),
+    };
+
+    setStatus("loading");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        throw new Error("request failed");
+      }
+
+      setStatus("success");
+      form.reset();
+    } catch {
+      setStatus("error");
+    }
   }
+
+  const isLoading = status === "loading";
 
   return (
     <form onSubmit={handleSubmit} noValidate className="space-y-4">
@@ -75,15 +101,31 @@ export default function ContactForm() {
 
       <button
         type="submit"
-        className="btn-primary inline-flex items-center gap-2 rounded bg-copper px-6 py-3 text-sm font-semibold uppercase tracking-wide text-ink-900 hover:bg-copper-light"
+        disabled={isLoading}
+        className="btn-primary inline-flex items-center gap-2 rounded bg-copper px-6 py-3 text-sm font-semibold uppercase tracking-wide text-ink-900 hover:bg-copper-light disabled:cursor-not-allowed disabled:opacity-60"
       >
-        Enviar mensaje
-        <ArrowRight className="h-4 w-4" strokeWidth={2} aria-hidden="true" />
+        {isLoading ? (
+          <>
+            Enviando
+            <Loader2 className="h-4 w-4 animate-spin" strokeWidth={2} aria-hidden="true" />
+          </>
+        ) : (
+          <>
+            Enviar mensaje
+            <ArrowRight className="h-4 w-4" strokeWidth={2} aria-hidden="true" />
+          </>
+        )}
       </button>
 
       {status === "success" && (
         <p role="status" className="text-sm text-copper">
           Gracias por tu mensaje, te contactaremos a la brevedad.
+        </p>
+      )}
+
+      {status === "error" && (
+        <p role="alert" className="text-sm text-red-400">
+          No pudimos enviar tu mensaje. Intenta nuevamente o escríbenos directo a administración@rvminerals.com.
         </p>
       )}
     </form>
