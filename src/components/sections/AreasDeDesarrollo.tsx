@@ -1,7 +1,7 @@
 import Image from "next/image";
-import desarrolloImage from "../../../public/images/mining/desarrollo.png";
-import procesamientoImage from "../../../public/images/mining/procesamiento.png";
-import comercializacionImage from "../../../public/images/mining/comercializacion.png";
+import rocasImage from "../../../public/images/mining/rocas.png";
+import zonaTrabajoImage from "../../../public/images/mining/zona-trabajo.png";
+import camionCargaImage from "../../../public/images/mining/camion-carga.png";
 import Reveal from "@/components/ui/Reveal";
 
 const areas = [
@@ -10,24 +10,24 @@ const areas = [
     title: "Desarrollo y Explotación Minera",
     description:
       "Participamos en iniciativas orientadas al desarrollo, explotación y valorización de recursos minerales.",
-    image: desarrolloImage,
-    alt: "Excavación en faena minera a cielo abierto",
+    image: rocasImage,
+    alt: "Detalle de estratos rocosos con vetas minerales en faena de explotación",
   },
   {
     number: "02",
     title: "Procesamiento y Valorización",
     description:
       "Contamos con capacidades de procesamiento mediante operaciones y alianzas estratégicas que permiten transformar minerales en productos de mayor valor comercial.",
-    image: procesamientoImage,
-    alt: "Planta de procesamiento de minerales iluminada",
+    image: zonaTrabajoImage,
+    alt: "Vista panorámica de la zona de trabajo en una faena minera a cielo abierto",
   },
   {
     number: "03",
     title: "Comercialización de Minerales",
     description:
       "Gestionamos operaciones comerciales eficientes y transparentes, fortaleciendo relaciones de largo plazo con clientes y proveedores.",
-    image: comercializacionImage,
-    alt: "Carga y transporte de mineral para comercialización",
+    image: camionCargaImage,
+    alt: "Carguío de mineral en camión de gran tonelaje para su transporte y comercialización",
   },
 ];
 
