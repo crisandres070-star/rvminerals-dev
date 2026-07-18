@@ -15,18 +15,23 @@ export async function POST(request: Request) {
       );
     }
 
-    await resend.emails.send({
-      // TODO: revertir a 'R&V Minerals <contacto@rvminerals.com>' una vez que el dominio
-      // rvminerals.com esté verificado en el panel de Resend. Usando el dominio de
-      // pruebas onboarding@resend.dev mientras tanto.
-      from: 'R&V Minerals <onboarding@resend.dev>',
-      to: 'administración@rvminerals.com',
+    const { data, error } = await resend.emails.send({
+      from: 'R&V Minerals <administracion@rvminerals.com>',
+      to: 'administracion@rvminerals.com',
       replyTo: correo,
       subject: asunto ? `[Web] ${asunto}` : `[Web] Nuevo mensaje de ${nombre}`,
       text: `Nombre: ${nombre}\nCorreo: ${correo}\n\nMensaje:\n${mensaje}`,
     });
 
-    return NextResponse.json({ ok: true });
+    if (error) {
+      console.error('Resend error:', error);
+      return NextResponse.json(
+        { error: error.message || 'No se pudo enviar el mensaje' },
+        { status: 422 }
+      );
+    }
+
+    return NextResponse.json({ ok: true, id: data?.id });
   } catch (error) {
     console.error('Error enviando correo:', error);
     return NextResponse.json(
