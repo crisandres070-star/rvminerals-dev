@@ -58,7 +58,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <MapPin className="h-4 w-4 shrink-0 text-copper" strokeWidth={1.5} aria-hidden="true" />
-                <span>Antofagasta, Chile</span>
+                <span>La Serena, Chile</span>
               </li>
             </ul>
           </div>

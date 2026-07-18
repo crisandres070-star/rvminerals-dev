@@ -1,12 +1,47 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Mail, Menu, X } from "lucide-react";
 import Logo from "@/components/ui/Logo";
 import { navLinks } from "@/lib/nav-links";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [activeHref, setActiveHref] = useState(navLinks[0]?.href ?? "#inicio");
+  const suppressUntil = useRef(0);
+
+  useEffect(() => {
+    const sections = navLinks
+      .map((link) => document.querySelector(link.href))
+      .filter((el): el is Element => el !== null);
+
+    if (sections.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (Date.now() < suppressUntil.current) return;
+
+        const visible = entries.filter((entry) => entry.isIntersecting);
+        if (visible.length === 0) return;
+
+        const topMost = visible.reduce((closest, entry) =>
+          entry.boundingClientRect.top < closest.boundingClientRect.top ? entry : closest
+        );
+
+        setActiveHref(`#${topMost.target.id}`);
+      },
+      { rootMargin: "-45% 0px -45% 0px", threshold: 0 }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
+
+  function handleLinkClick(href: string) {
+    setActiveHref(href);
+    suppressUntil.current = Date.now() + 700;
+  }
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/5 bg-ink-900/95 backdrop-blur">
@@ -18,13 +53,14 @@ export default function Navbar() {
           <Logo />
         </div>
 
-        <ul className="hidden items-center gap-3 xl:flex 2xl:gap-5">
+        <ul className="hidden items-center gap-5 xl:flex">
           {navLinks.map((link) => (
             <li key={link.href} className="shrink-0">
               <a
                 href={link.href}
+                onClick={() => handleLinkClick(link.href)}
                 className={`whitespace-nowrap text-sm font-semibold uppercase tracking-wide transition-colors ${
-                  link.href === "#inicio"
+                  activeHref === link.href
                     ? "border-b-2 border-copper pb-1 text-paper"
                     : "text-muted hover:text-paper"
                 }`}
@@ -64,9 +100,12 @@ export default function Navbar() {
               <li key={link.href}>
                 <a
                   href={link.href}
-                  onClick={() => setOpen(false)}
+                  onClick={() => {
+                    handleLinkClick(link.href);
+                    setOpen(false);
+                  }}
                   className={`block rounded px-2 py-3 text-sm font-medium uppercase tracking-wide ${
-                    link.href === "#inicio"
+                    activeHref === link.href
                       ? "text-copper"
                       : "text-muted hover:text-paper"
                   }`}

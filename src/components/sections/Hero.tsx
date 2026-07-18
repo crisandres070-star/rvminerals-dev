@@ -64,7 +64,7 @@ export default function Hero() {
 
             <a
               href="#quienes-somos"
-              className="btn-primary mt-10 inline-flex items-center gap-2 rounded bg-copper px-7 py-4 text-sm font-semibold uppercase tracking-wide text-ink-900 hover:bg-copper-light"
+              className="btn-primary mt-10 inline-flex items-center gap-2 rounded bg-copper px-7 py-4 text-sm font-semibold uppercase tracking-wide text-paper hover:bg-copper-light"
             >
               Conocer empresa
               <ArrowRight className="h-4 w-4" strokeWidth={2} aria-hidden="true" />

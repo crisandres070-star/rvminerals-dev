@@ -102,7 +102,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={isLoading}
-        className="btn-primary inline-flex items-center gap-2 rounded bg-copper px-6 py-3 text-sm font-semibold uppercase tracking-wide text-ink-900 hover:bg-copper-light disabled:cursor-not-allowed disabled:opacity-60"
+        className="btn-primary inline-flex items-center gap-2 rounded bg-copper px-6 py-3 text-sm font-semibold uppercase tracking-wide text-paper hover:bg-copper-light disabled:cursor-not-allowed disabled:opacity-60"
       >
         {isLoading ? (
           <>

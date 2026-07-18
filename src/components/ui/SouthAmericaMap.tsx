@@ -16,9 +16,9 @@ const countries = [
   "M268.384,516.715l1.763,1.616l2.731-1.694l2.49,0.078l-0.32,0.968l-1.046,2.179l-0.164,5.421l-4.97,2.022l0.242-3.476l-3.207-2.991l0.164-1.538L268.384,516.715L268.384,516.715z",
 ];
 
-// Approximate position of Antofagasta, Chile within the path coordinate
+// Approximate position of La Serena, Chile within the path coordinate
 // space above (interpolated along the Chile outline, north tip ~ Arica).
-const ANTOFAGASTA = { x: 239, y: 604 };
+const LA_SERENA = { x: 236, y: 626 };
 
 export default function SouthAmericaMap() {
   return (
@@ -37,13 +37,13 @@ export default function SouthAmericaMap() {
 
       <g className="text-[#FF5A3C]">
         <circle
-          cx={ANTOFAGASTA.x}
-          cy={ANTOFAGASTA.y}
+          cx={LA_SERENA.x}
+          cy={LA_SERENA.y}
           r="3"
           className="origin-center animate-ping fill-current opacity-60"
-          style={{ transformOrigin: `${ANTOFAGASTA.x}px ${ANTOFAGASTA.y}px` }}
+          style={{ transformOrigin: `${LA_SERENA.x}px ${LA_SERENA.y}px` }}
         />
-        <circle cx={ANTOFAGASTA.x} cy={ANTOFAGASTA.y} r="2.2" className="fill-current" />
+        <circle cx={LA_SERENA.x} cy={LA_SERENA.y} r="2.2" className="fill-current" />
       </g>
     </svg>
   );
