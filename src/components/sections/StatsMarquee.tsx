@@ -1,8 +1,9 @@
 const STATS = [
-  "15+ años de experiencia",
-  "120+ operaciones coordinadas",
-  "250+ colaboraciones estratégicas",
-  "0 accidentes graves en los últimos 5 años",
+  "Exploración y evaluación",
+  "Procesamiento de minerales",
+  "Logística y transporte",
+  "Trazabilidad del material",
+  "Seguridad operacional",
 ];
 
 type StatsMarqueeProps = {

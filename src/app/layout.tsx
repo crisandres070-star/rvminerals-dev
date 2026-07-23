@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Barlow_Condensed, Inter } from "next/font/google";
+import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import "./globals.css";
 
 const barlowCondensed = Barlow_Condensed({
@@ -33,6 +34,7 @@ export default function RootLayout({
         className={`${barlowCondensed.variable} ${inter.variable} bg-ink-900 font-sans antialiased`}
       >
         {children}
+        <WhatsAppButton />
       </body>
     </html>
   );
