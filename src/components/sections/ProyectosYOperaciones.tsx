@@ -3,39 +3,34 @@
 import { useRef } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import alturasImage from "../../../public/images/mining/alturas.png";
-import explotacionImage from "../../../public/images/mining/explotacion.png";
-import carguioImage from "../../../public/images/mining/carguio.png";
-import camionMineroImage from "../../../public/images/mining/camion-minero.png";
-import plantaNocheImage from "../../../public/images/mining/planta-noche.png";
-import puertoImage from "../../../public/images/mining/puerto.png";
+import proyecto1 from "../../../public/images/mining/1.png";
+import proyecto2 from "../../../public/images/mining/2.png";
+import proyecto3 from "../../../public/images/mining/3.png";
+import proyecto4 from "../../../public/images/mining/4.png";
+import proyecto5 from "../../../public/images/mining/5.png";
+import proyecto6 from "../../../public/images/mining/6.png";
+import proyecto7 from "../../../public/images/mining/7.png";
+import proyecto8 from "../../../public/images/mining/8.png";
+import proyecto9 from "../../../public/images/mining/9.png";
+import proyecto10 from "../../../public/images/mining/10.png";
+import proyecto11 from "../../../public/images/mining/11.png";
+import proyecto12 from "../../../public/images/mining/12.png";
 import Reveal from "@/components/ui/Reveal";
 
+// TODO: pedir al cliente una descripción real de cada foto para mejorar el alt (SEO/accesibilidad)
 const fotos = [
-  {
-    src: alturasImage,
-    alt: "Vista aérea de un rajo minero a cielo abierto mostrando los bancos en espiral de la faena",
-  },
-  {
-    src: explotacionImage,
-    alt: "Excavadora en plena explotación minera junto a dos trabajadores con chaleco reflectante supervisando la faena",
-  },
-  {
-    src: carguioImage,
-    alt: "Cargío de camiones mineros con excavadora al amanecer, con la planta de procesamiento al fondo",
-  },
-  {
-    src: camionMineroImage,
-    alt: "Camión minero de gran tonelaje en tránsito por un camino de faena con equipos de apoyo detrás",
-  },
-  {
-    src: plantaNocheImage,
-    alt: "Vista aérea nocturna de una planta de procesamiento de minerales iluminada",
-  },
-  {
-    src: puertoImage,
-    alt: "Carga de mineral a granel en un buque desde las grúas de un puerto de embarque",
-  },
+  { src: proyecto1, alt: "Operación minera de R & V Minerals — foto 1" },
+  { src: proyecto2, alt: "Operación minera de R & V Minerals — foto 2" },
+  { src: proyecto3, alt: "Operación minera de R & V Minerals — foto 3" },
+  { src: proyecto4, alt: "Operación minera de R & V Minerals — foto 4" },
+  { src: proyecto5, alt: "Operación minera de R & V Minerals — foto 5" },
+  { src: proyecto6, alt: "Operación minera de R & V Minerals — foto 6" },
+  { src: proyecto7, alt: "Operación minera de R & V Minerals — foto 7" },
+  { src: proyecto8, alt: "Operación minera de R & V Minerals — foto 8" },
+  { src: proyecto9, alt: "Operación minera de R & V Minerals — foto 9" },
+  { src: proyecto10, alt: "Operación minera de R & V Minerals — foto 10" },
+  { src: proyecto11, alt: "Operación minera de R & V Minerals — foto 11" },
+  { src: proyecto12, alt: "Operación minera de R & V Minerals — foto 12" },
 ];
 
 export default function ProyectosYOperaciones() {
