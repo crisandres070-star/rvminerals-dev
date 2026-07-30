@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
-import heroImage from "../../../public/images/mining/imagen-principal.png";
+import heroImage from "../../../public/images/mining/27.png";
 import Reveal from "@/components/ui/Reveal";
 
 export default function Hero() {
@@ -12,12 +12,12 @@ export default function Hero() {
       <div className="absolute inset-0">
         <Image
           src={heroImage}
-          alt="Camión minero de gran tonelaje en faena de extracción al atardecer"
+          alt="Vista aérea de camión tolva minero transportando material en faena a cielo abierto"
           fill
           priority
           quality={90}
           sizes="100vw"
-          className="animate-ken-burns object-cover object-[78%_62%]"
+          className="animate-ken-burns object-cover object-[48%_48%] lg:object-[63%_48%]"
         />
       </div>
       <div className="absolute inset-0 bg-hero-gradient" />

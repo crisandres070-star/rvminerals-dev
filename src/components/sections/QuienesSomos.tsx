@@ -86,7 +86,7 @@ export default function QuienesSomos() {
         <Reveal delay={120} className="relative aspect-[8/5] w-full lg:self-center">
           <Image
             src={quienesSomosImage}
-            alt="Trabajadores con casco y chaleco reflectante observando una planta de procesamiento minero al atardecer"
+            alt="Equipo de R&V Minerals revisando plano de faena en terreno"
             fill
             quality={90}
             sizes="(min-width: 1024px) 50vw, 100vw"
