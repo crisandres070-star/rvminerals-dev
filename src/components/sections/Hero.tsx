@@ -17,7 +17,7 @@ export default function Hero() {
           priority
           quality={90}
           sizes="100vw"
-          className="animate-ken-burns object-cover object-[48%_48%] lg:object-[63%_48%]"
+          className="animate-ken-burns object-cover object-[66%_48%] lg:object-[63%_48%]"
         />
       </div>
       <div className="absolute inset-0 bg-hero-gradient" />
