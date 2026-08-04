@@ -37,7 +37,7 @@ export default function Hero() {
               <br />
               la producción minera
               <br />
-              con los <span className="text-[#B85A2E]">mercados globales</span>
+              con los mercados globales
             </h1>
           </Reveal>
 

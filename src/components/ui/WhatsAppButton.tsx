@@ -1,4 +1,4 @@
-const WHATSAPP_URL = "https://wa.me/56989126993";
+const WHATSAPP_URL = "https://wa.me/56991516113";
 
 function WhatsAppIcon(props: React.SVGProps<SVGSVGElement>) {
   return (

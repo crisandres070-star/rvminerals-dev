@@ -5,12 +5,10 @@ import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import proyecto1 from "../../../public/images/mining/1.png";
 import proyecto2 from "../../../public/images/mining/2.png";
-import proyecto3 from "../../../public/images/mining/3.png";
 import proyecto4 from "../../../public/images/mining/4.png";
 import proyecto5 from "../../../public/images/mining/5.png";
 import proyecto6 from "../../../public/images/mining/6.png";
 import proyecto7 from "../../../public/images/mining/7.png";
-import proyecto8 from "../../../public/images/mining/8.png";
 import proyecto9 from "../../../public/images/mining/9.png";
 import proyecto10 from "../../../public/images/mining/10.png";
 import proyecto11 from "../../../public/images/mining/11.png";
@@ -21,12 +19,10 @@ import Reveal from "@/components/ui/Reveal";
 const fotos = [
   { src: proyecto1, alt: "Operación minera de R & V Minerals — foto 1" },
   { src: proyecto2, alt: "Operación minera de R & V Minerals — foto 2" },
-  { src: proyecto3, alt: "Operación minera de R & V Minerals — foto 3" },
   { src: proyecto4, alt: "Operación minera de R & V Minerals — foto 4" },
   { src: proyecto5, alt: "Operación minera de R & V Minerals — foto 5" },
   { src: proyecto6, alt: "Operación minera de R & V Minerals — foto 6" },
   { src: proyecto7, alt: "Operación minera de R & V Minerals — foto 7" },
-  { src: proyecto8, alt: "Operación minera de R & V Minerals — foto 8" },
   { src: proyecto9, alt: "Operación minera de R & V Minerals — foto 9" },
   { src: proyecto10, alt: "Operación minera de R & V Minerals — foto 10" },
   { src: proyecto11, alt: "Operación minera de R & V Minerals — foto 11" },
